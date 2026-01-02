@@ -21,7 +21,14 @@ class Board:
         """
         Checks whether a move in the given column is valid.
         """
-        pass
+        if column < 0 or column >= 7:
+            return False
+
+        if self.grid[0][column] != 0:
+            return False
+
+        return True
+        
 
     def drop_stone(self, column, player):
         """
