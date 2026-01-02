@@ -44,4 +44,48 @@ class Board:
         """
         Checks whether the given player has won the game.
         """
-        pass
+        for row in range(6):
+            for col in range(4):
+                if (
+                        self.grid[row][col] == player and
+                        self.grid[row][col + 1] == player and
+                        self.grid[row][col + 2] == player and
+                        self.grid[row][col + 3] == player
+                ):
+                    return True
+
+            # Vertical 
+        for row in range(3):
+            for col in range(7):
+                if (
+                        self.grid[row][col] == player and
+                        self.grid[row + 1][col] == player and
+                        self.grid[row + 2][col] == player and
+                        self.grid[row + 3][col] == player
+                ):
+                    return True
+
+            # Diagonal down-right
+        for row in range(3):
+            for col in range(4):
+                if (
+                        self.grid[row][col] == player and
+                        self.grid[row + 1][col + 1] == player and
+                        self.grid[row + 2][col + 2] == player and
+                        self.grid[row + 3][col + 3] == player
+                ):
+                    return True
+
+            # Diagonal down-left
+        for row in range(3):
+            for col in range(3, 7):
+                if (
+                        self.grid[row][col] == player and
+                        self.grid[row + 1][col - 1] == player and
+                        self.grid[row + 2][col - 2] == player and
+                        self.grid[row + 3][col - 3] == player
+                ):
+                    return True
+
+        return False
+
