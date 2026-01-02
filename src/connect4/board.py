@@ -7,7 +7,15 @@ class Board:
         """
         Initializes an empty 6x7 game board.
         """
-        self.grid = []
+        self.grid = [ #Game Board Structure, 0 = empty field
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+    ]
+
 
     def is_valid_move(self, column):
         """
