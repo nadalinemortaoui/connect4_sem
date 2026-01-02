@@ -8,7 +8,7 @@ class Board:
         Initializes an empty 6x7 game board.
         """
         self.grid = [ #Game Board Structure, 0 = empty field
-        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0], #First Row from Above
         [0, 0, 0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0, 0, 0],
@@ -28,13 +28,17 @@ class Board:
             return False
 
         return True
-        
+
 
     def drop_stone(self, column, player):
         """
         Drops a stone into the given column for the given player.
         """
-        pass
+        for row in range(5, -1, -1) #Checks if field is empty
+            if self.grid[row][column] == 0:
+                self.grid[row][column] = player
+                return
+
 
     def check_win(self, player):
         """
