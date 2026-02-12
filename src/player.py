@@ -21,7 +21,7 @@ class Computer(Player):
     def get_move(self, board) -> int:
         free =[]
         for i in range(7):
-            if not board.is_column_full(i):
+            if not board.is_full(i):
                 free.append(i)
         if free:
             turn = random.choice(free)
