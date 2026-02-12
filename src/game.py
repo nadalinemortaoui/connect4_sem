@@ -27,7 +27,7 @@ class Game:
         if modus == '2':
             name = input("Your name: ")
             self.player1 = Player(name, 'X')
-            self.player2 = ComputerPlayer("Computer", 'O')
+            self.player2 = Computer("Computer", 'O')
 
         else:
             name1 = input("Name Spieler 1: ")
