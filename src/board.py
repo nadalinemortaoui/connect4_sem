@@ -26,7 +26,9 @@ class Board:
                 self.grid[row][column] = player
                 return True
 
-    def is_full(self):
+    def is_full(self, col = None):
+        if col is not None:
+            return self.grid[0][col] != 0
         return all(self.grid[0][col] != 0 for col in range(7))
 
 
