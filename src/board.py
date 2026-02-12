@@ -24,7 +24,10 @@ class Board:
         for row in range(5, -1, -1): #Checks if field is empty
             if self.grid[row][column] == 0:
                 self.grid[row][column] = player
-                return
+                return True
+
+    def is_full(self):
+        return all(self.grid[0][col] != 0 for col in range(7))
 
 
     def check_win(self, player):
