@@ -64,7 +64,7 @@ class Game:
 
             success = self.board.drop_stone(column, self.current_player.symbol)
 
-            if not sucess:
+            if not success:
                 print()
                 print("This column is full, choose another one.")
                 print()
