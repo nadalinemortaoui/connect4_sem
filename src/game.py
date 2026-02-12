@@ -38,8 +38,8 @@ class Game:
         self.current_player = self.player1
 
         print()
-        print(f"{self.player1.name} is playing against '{self.player1.symbol}'")
-        print(f"{self.player2.name} is playing against '{self.player2.symbol}'")
+        print(f"{self.player1.name} is playing as '{self.player1.symbol}'")
+        print(f"{self.player2.name} is playing as '{self.player2.symbol}'")
         print()
 
     def switch_player(self):
