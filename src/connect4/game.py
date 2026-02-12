@@ -1,7 +1,5 @@
 from src.board import Board
-from src.player import Player, ComputerPlayer
-
-
+from src.player import Player
 class Game:
 
     def __init__(self):
