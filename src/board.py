@@ -73,3 +73,12 @@ class Board:
 
         return False
 
+    def display(self):
+        print("\n  1 2 3 4 5 6 7")  # Column numbers for the player
+        print("---------------")
+        for row in self.grid:
+            # This joins the numbers in the row with a pipe | symbol
+            # and replaces 0 with a dot . to make it look nicer
+            row_str = " ".join([str(cell) if cell != 0 else "." for cell in row])
+            print(f"| {row_str} |")
+        print("---------------\n")
