@@ -2,14 +2,34 @@ from src.board import Board
 from src.player import Player, Computer
 
 class Game:
+        """
+        Represents the main Connect4 game controller.
 
+        Manages the board, players, game setup,
+        turn switching and overall game flow.
+        """
     def __init__(self):
+            """
+            Initializes the game.
+
+            Creates a new board and sets the players
+            and current player to None.
+            """
         self.board = Board()
         self.player1 = None
         self.player2 = None
         self.current_player = None
 
     def setup_game(self):
+            """
+            Sets up the game mode and initializes players.
+
+            Allows the user to choose between:
+            - Player vs Player
+            - Player vs Computer
+
+            Assigns symbols and sets the starting player.
+            """
         print("=" * 40)
         print("    CONNECT FOUR")
         print("=" * 40)
@@ -43,12 +63,27 @@ class Game:
         print()
 
     def switch_player(self):
+            """
+            Switches the current player.
+
+            Alternates between player1 and player2.
+            """
         if self.current_player == self.player1:
             self.current_player = self.player2
         else:
             self.current_player = self.player1
 
     def play(self):
+    """
+    Starts and runs the main game loop.
+
+    Handles:
+    - Displaying the board
+    - Getting player moves
+    - Checking for win conditions
+    - Checking for a draw
+    - Switching turns
+    """
         self.setup_game()
 
         while True:
